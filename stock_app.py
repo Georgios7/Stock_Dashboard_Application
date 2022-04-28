@@ -6,10 +6,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import yfinance as yf
 
+from PIL import Image
+
 st.set_page_config( page_title='Stock Dashboard' , page_icon="📈", layout="centered", initial_sidebar_state="auto", menu_items=None)
+
 st.sidebar.info('This App is created to keep track of Stock Prices and Returns')
 
-st.title('Stock Dashboard App')
+st.title('Stock Dashboard Application')
+image = Image.open('stock market img.jpg')
+resized_img = image.resize((800, 300))
+st.image(resized_img)
+
 stocks = ('GOOG', 'MSFT', 'DAR', 'AMD', 'ADBE','ABBV','AMZN','PG','PYPL','MU','NEE')
 dropdown =st.multiselect('Select at least two stocks', stocks, default = ['GOOG', 'MSFT', 'DAR', 'AMD', 'ADBE','ABBV','AMZN','PG','PYPL','MU','NEE'])
 
