@@ -13,7 +13,7 @@ st.set_page_config( page_title='Stock Dashboard' , page_icon="📈", layout="cen
 st.sidebar.info('This App is created to keep track of Stock Prices and Returns')
 
 st.title('Stock Dashboard Application')
-image = Image.open('stock market img.jpg')
+image = Image.open('stock_market_img.jpg')
 resized_img = image.resize((800, 300))
 st.image(resized_img)
 
