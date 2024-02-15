@@ -48,7 +48,7 @@ st.subheader('Histogram of Daily Returns and Summary Statistics')
 dropdown_2 =st.selectbox('Select your stocks', dropdown)
 sns.set_style("darkgrid")
 fig = plt.figure(figsize=(12, 8))
-sns.distplot(returns[dropdown_2])
+sns.histplot(returns[dropdown_2], kde = True)
 st.pyplot()
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
