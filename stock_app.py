@@ -55,14 +55,14 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 statistics = returns[dropdown_2].describe().to_frame().transpose()
 st.dataframe(data=statistics)
 
-#Cumulative returns : https://www.investopedia.com/terms/c/cumulativereturn.asp, https://community.alteryx.com/t5/Alteryx-Designer-Discussions/Calculation-of-cumulative-returns/td-p/398284
-def relative_returns(data_):
-	rel = data_.pct_change()
-	cumret= round( ((1+rel).cumprod()-1) *100,2)
-	cumret = cumret.fillna(0)
-	return cumret
-st.subheader('Cumulative Returns')
-st.line_chart(relative_returns(data_close))
+# #Cumulative returns : https://www.investopedia.com/terms/c/cumulativereturn.asp, https://community.alteryx.com/t5/Alteryx-Designer-Discussions/Calculation-of-cumulative-returns/td-p/398284
+# def relative_returns(data_):
+# 	rel = data_.pct_change()
+# 	cumret= round( ((1+rel).cumprod()-1) *100,2)
+# 	cumret = cumret.fillna(0)
+# 	return cumret
+# st.subheader('Cumulative Returns')
+# st.line_chart(relative_returns(data_close))
 
 # correlation between the stock returns
 st.subheader('Stock Returns Correlations')
