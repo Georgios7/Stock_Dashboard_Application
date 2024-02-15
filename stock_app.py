@@ -18,7 +18,7 @@ resized_img = image.resize((800, 300))
 st.image(resized_img)
 
 stocks = ('GOOG', 'MSFT', 'XRP-USD', 'LINK-USD', 'ADBE','ABBV','AVAX-USD','ETH-USD','PYPL','SOL-USD','BTC-USD')
-dropdown =st.multiselect('Select at least two stocks', stocks, default = ['GOOG', 'MSFT', 'XRP-USD', 'LINK-USD', 'ADBE','ABBV','AVAX-USD','ETH-USD','PYPL','SOL-USD','BTC-USD']
+dropdown =st.multiselect('Select at least two stocks', stocks, default = ['GOOG', 'MSFT', 'XRP-USD', 'LINK-USD', 'ADBE','ABBV','AVAX-USD','ETH-USD','PYPL','SOL-USD','BTC-USD'])
 
 start_date = pd.to_datetime('2020-01-01')
 today = pd.to_datetime('today')
